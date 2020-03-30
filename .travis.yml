@@ -1,0 +1,9 @@
+language: java
+
+env:
+  global:
+    - CODECOV_TOKEN="7ed9a41d-b047-4d0e-9dc8-f0ccb4e89eb1"
+script:
+    - gradle test jacocoTestReport
+after_script:
+    - bash <(curl -s https://codecov.io/bash)
